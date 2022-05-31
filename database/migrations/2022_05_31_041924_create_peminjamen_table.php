@@ -18,6 +18,7 @@ class CreatePeminjamenTable extends Migration
             $table->foreignId('book_id')->references('id')->on('books');
             $table->date('tgl_peminjaman');
             $table->date('tgl_pengembalian');
+            $table->decimal('denda',14,2);
             $table->integer('total');
             $table->timestamps();
         });

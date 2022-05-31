@@ -23,5 +23,7 @@ class AdminSeeder extends Seeder
         ]);
 
         $role        = Role::where('name', 'admin')->first();
+        $role->givePermissionTo([$permissions]);
+        $user->assignRole($role);
     }
 }
